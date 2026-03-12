@@ -25,6 +25,7 @@
 	  ./atuin.nix
 	  ./gnupg.nix
 	  ./git.nix
+	  ./jj.nix
         ];
       };
 
