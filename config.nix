@@ -6,7 +6,10 @@
   - GitHub repo: https://github.com/nix-community/home-manager
   - Available options: https://nix-community.github.io/home-manager/options.xhtml
 */
-{ pkgs, nixpkgs, ... }:
+{ lib, pkgs, ... }:
+let
+  gcloud = pkgs.google-cloud-sdk.withExtraComponents [ pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin ];
+in
 {
   # Options under `nixtral` are custom and definied in https://github.com/mistralai/nixtral
   # Check out the README to see what options are available
@@ -51,6 +54,7 @@
     # dev tools
     jq
     git
+    tig
     jujutsu
     jj-fzf
     delta
@@ -59,10 +63,24 @@
     go
     rustup
     python3
+    gnumake
+    nil
+    # kubernetes & cloud
+    kubectl
+    k9s
+    kubectx
+    gcloud
   ];
 
   home.sessionPath = [
     "/Users/leonardo.barcaroli/.bin"
     "/opt/homebrew/bin"
   ];
+
+  home.sessionVariables = {
+    EDITOR = "vim";
+  };
+
+  # manual management of the original vim config (keeping vim and neovim distinct)
+  programs.neovim.vimAlias = lib.mkForce false;
 }
