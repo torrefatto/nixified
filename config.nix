@@ -51,8 +51,10 @@ in
     # mgmt
     htop
     kubectl
+    bitwarden-cli
     # dev tools
     jq
+    fx
     git
     tig
     jujutsu
