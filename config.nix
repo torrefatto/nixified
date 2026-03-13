@@ -17,6 +17,8 @@ in
     # TODO
     username = "leonardo.barcaroli";
 
+    dataHome = "/Users/leonardo.barcaroli/.local/share/nixtral";
+
     clusters = {
       enable = false;
 
@@ -30,6 +32,27 @@ in
 
       # TODO: check that tilde works
       mistralRoot = "~/workspace/mistral";
+    };
+
+    vibe = {
+      models = {
+        anthropic.enable = true;
+        mistral.enable = true;
+      };
+
+      tools = {
+        claude-code = {
+          enable = true;
+        };
+
+        opencode = {
+          enable = true;
+        };
+
+        mistral-vibe = {
+          enable = true;
+        };
+      };
     };
   };
 
