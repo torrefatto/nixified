@@ -28,6 +28,10 @@
         backend = "gpg";
       };
 
+      revsets = {
+        bookmark-advance-to = "heads(::@ & mutable() & ~description(exact:\"\") & (~empty() | merges()))";
+      };
+
       aliases = {
         pull = ["util" "exec" "--" "bash" "-c" ''
         jj git fetch
