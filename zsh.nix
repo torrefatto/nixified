@@ -1,7 +1,3 @@
-{ lib, config, ... }:
-let
-  cfg = config.nixtral;
-in
 {
   programs.zsh = {
     enable = true;
