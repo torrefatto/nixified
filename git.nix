@@ -11,22 +11,22 @@
     settings = { 
       url = {
         "git@github.com:" = {
-	  insteadOf = "https://github.com/";
-	};
+          insteadOf = "https://github.com/";
+        };
       };
 
       core.pager = "delta";
 
       delta = {
         navigate = true;
-	light = false;
-	side-by-side = true;
-	line-numbers = true;
+        light = false;
+        side-by-side = true;
+        line-numbers = true;
       };
 
       diff = {
         colorMoved = "default";
-	algorithm = "patience";
+        algorithm = "patience";
       };
 
       alias = {

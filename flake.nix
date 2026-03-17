@@ -19,13 +19,13 @@
           ./config.nix
           { nixtral.configProfile = profileName; }
           ./ssh.nix
-	  ./bash.nix
-	  ./zsh.nix
-	  ./starship.nix
-	  ./atuin.nix
-	  ./gnupg.nix
-	  ./git.nix
-	  ./jj.nix
+          ./bash.nix
+          ./zsh.nix
+          ./starship.nix
+          ./atuin.nix
+          ./gnupg.nix
+          ./git.nix
+          ./jj.nix
         ];
       };
 

@@ -1,7 +1,7 @@
 {
   programs.jujutsu = {
     enable = true;
-   
+
     settings = {
       user = {
         name = "Leonardo Barcaroli";
@@ -10,17 +10,17 @@
 
       ui = {
         merge-editor = "vimdiff";
-	bookmark-list-sort-keys = ["commiter-date-"];
-	default-command = "status";
+        bookmark-list-sort-keys = ["commiter-date-"];
+        default-command = "status";
       };
 
       merge-tools = {
         delta = {
-	  diff-expected-exit-codes = [0 1];
+          diff-expected-exit-codes = [0 1];
           diff-args = ["--side-by-side" "$left" "$right" "--width=$width"];
-	};
+        };
 
-	vimdiff.diff-invocation-mode = "file-by-file";
+        vimdiff.diff-invocation-mode = "file-by-file";
       };
 
       signing = {
