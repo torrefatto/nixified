@@ -6,6 +6,7 @@
       enable = true;
       plugins = [
         "zsh-users/zsh-autosuggestions"
+        "zsh-users/zsh-syntax-highlighting"
       ];
     };
 
@@ -19,5 +20,15 @@
       z = "zellij";
       jjj = "jj-fzf";
     };
+
+    initContent = ''
+    function ,cd () {
+        [ "z''${_ZROOT}" != "z" ] && cd "''${_ZROOT}" && return 0
+        [ "z''${TMUX_BASE}" != "z" ] && cd "''${TMUX_BASE}" && return 0
+        cd ~
+    }
+
+    bindkey -e
+    '';
   };
 }
