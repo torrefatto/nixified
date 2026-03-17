@@ -71,10 +71,13 @@ in
     zellij
     atuin
     bat
+    fzf
+    tree
     # mgmt
     htop
     kubectl
     bitwarden-cli
+    syncthing-macos
     # dev tools
     jq
     fx
@@ -83,18 +86,23 @@ in
     jujutsu
     jj-fzf
     delta
+    docker
     podman
+    kind
     # languages and toolchains
     go
     rustup
     python3
     gnumake
     nil
+    uv
     # kubernetes & cloud
     kubectl
     k9s
     kubectx
     gcloud
+    google-cloud-sql-proxy
+    pgcli
   ];
 
   home.sessionPath = [
