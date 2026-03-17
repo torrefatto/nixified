@@ -22,6 +22,7 @@
           ./bash.nix
           ./zsh.nix
           ./starship.nix
+          ./zellij.nix
           ./atuin.nix
           ./gnupg.nix
           ./git.nix
