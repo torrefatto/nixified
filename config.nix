@@ -86,7 +86,6 @@ in
     jujutsu
     jj-fzf
     delta
-    docker
     podman
     kind
     # languages and toolchains
