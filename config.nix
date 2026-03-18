@@ -88,6 +88,7 @@ in
     delta
     podman
     kind
+    gh
     # languages and toolchains
     go
     rustup
@@ -95,6 +96,8 @@ in
     gnumake
     nil
     uv
+    nodejs_25
+    jsonnet
     # kubernetes & cloud
     kubectl
     k9s
