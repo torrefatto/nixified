@@ -12,6 +12,8 @@
         merge-editor = "vimdiff";
         bookmark-list-sort-keys = ["commiter-date-"];
         default-command = "status";
+        pager = "delta";
+        diff-formatter = ":git";
       };
 
       merge-tools = {
@@ -32,12 +34,15 @@
         bookmark-advance-to = "heads(::@ & mutable() & ~description(exact:\"\") & (~empty() | merges()))";
       };
 
+      revset-aliases = {
+        me = "author(\"Leonardo Barcaroli\") | author(\"leonardo.barcaroli@mistral.ai\")";
+      };
+
       aliases = {
         pull = ["util" "exec" "--" "bash" "-c" ''
         jj git fetch
-        jj new -A $1@origin
+        jj rebase --branch local --destination=$1@origin
         jj bookmark set local --allow-backwards
-        jj rebase -r local --destination=$1@origin
         '' ""];
         push = ["util" "exec" "--" "bash" "-c" ''
         jj bookmark track $1 --remote=origin
