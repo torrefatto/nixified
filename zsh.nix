@@ -24,10 +24,11 @@
       t = "tmux";
       z = "zellij";
       jjj = "jj-fzf";
+      tailscale = "/Applications/Tailscale.app/Contents/MacOS/Tailscale";
     };
 
     setOptions = [
-       "COMPLETE_ALIASES"
+       "NO_COMPLETE_ALIASES"
     ];
 
     initContent = let
@@ -55,12 +56,6 @@
         # Completions and bindings
 
         __regen_or_source _tailscale "/Applications/Tailscale.app/Contents/MacOS/Tailscale completion zsh"
-
-        # Function-y aliases
-
-        function tailscale() {
-            /Applications/Tailscale.app/Contents/MacOS/Tailscale ''${@}
-        }
 
         # Completion paths
 
