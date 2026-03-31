@@ -117,6 +117,8 @@ in
 
   home.sessionVariables = {
     EDITOR = "vim";
+    SDKROOT = "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk";
+    MANPAGER = "bat -l man -p";
   };
 
   # manual management of the original vim config (keeping vim and neovim distinct)
