@@ -73,6 +73,7 @@ in
     bat
     fzf
     tree
+    cbonsai
     # mgmt
     htop
     kubectl
