@@ -91,6 +91,8 @@ in
     gh
     # languages and toolchains
     go
+    delve
+    golangci-lint
     rustup
     python3
     gnumake
