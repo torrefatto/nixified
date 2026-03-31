@@ -11,6 +11,8 @@
         "zsh-users/zsh-autosuggestions"
         "zsh-users/zsh-completions"
         "zsh-users/zsh-syntax-highlighting"
+        "ohmyzsh/ohmyzsh path:lib/key-bindings.zsh"
+        "ohmyzsh/ohmyzsh path:lib/completion.zsh"
       ];
     };
 
