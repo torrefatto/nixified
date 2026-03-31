@@ -70,10 +70,21 @@
 
         bindkey -e
       '';
+
+      zshZellijEnv = lib.mkOrder 1500 ''
+        # If in zellij, always source env in a special direrctory
+        ZSTATEPATH=''${ZSTATEPATH:-''${HOME}/.local/share/zsession}
+
+        if [ "z''${ZELLIJ_SESSION_NAME}" != "z" ]; then
+            ZSTATEFILE="''${ZSTATEPATH}/''${ZELLIJ_SESSION_NAME}"
+            [ -f ''${ZSTATEFILE} ] && source ''${ZSTATEFILE}
+        fi
+      '';
     in
         lib.mkMerge [
             zshFunctions
             zshCompletions
+            zshZellijEnv
         ];
   };
 }
