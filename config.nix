@@ -88,6 +88,7 @@ in
     jj-fzf
     delta
     podman
+    podman-compose
     kind
     gh
     # languages and toolchains

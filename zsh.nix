@@ -28,6 +28,7 @@
       jjj = "jj-fzf";
       tailscale = "/Applications/Tailscale.app/Contents/MacOS/Tailscale";
       kkk = "cbonsai -m 'You should rest'";
+      docker = "podman";
     };
 
     setOptions = [
