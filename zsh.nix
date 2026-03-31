@@ -56,7 +56,51 @@
 
             . ''${source}
         }
+
+        function ,pr() {
+            local branch="''${1}"
+            local title="''${2}"
+
+            if [[ "''${branch}" = "+"* ]]; then
+                branch=''${branch#+}
+                jj bookmark create -r @- ''${branch}
+            fi
+
+            jj push ''${branch}
+            gh pr create --title "''${title}" --head ''${branch}
+        }
+
+        function ,kssh() {
+            local inventory_path=''${ANSIBLE_INVENTORY:-''${HOME}/workspace/koyeb/ansible/inventory}
+            local -a ssh_opts
+            local -a remote_opts
+            local remote_host
+            local full_host
+            for arg in "''${@}"
+            do
+                if [[ $arg =~ "@.*" ]]
+                then
+                    remote_host=''${arg#@}
+                else
+                    if [ -z $remote_host ]
+                    then
+                        ssh_opts+=(''${arg})
+                    else
+                        remote_opts+=(''${arg})
+                    fi
+                fi
+            done
+            full_host=$(grep -E "^''${remote_host}" ''${inventory_path}|cut -f1 -d" ")
+            if [ "''${full_host}z" = "z" ]
+            then
+                echo "''${remote_host} not found in ''${inventory_path}"
+                return 1
+            fi
+            echo ssh ''${ssh_opts[@]} -l leonardo "''${full_host}" ''${remote_opts[@]}
+            ssh ''${ssh_opts[@]} -l leonardo "''${full_host}" ''${remote_opts[@]}
+        }
       '';
+
       zshCompletions = lib.mkOrder 1000 ''
         # Completions and bindings
 
