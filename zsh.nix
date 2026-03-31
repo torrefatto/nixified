@@ -32,6 +32,10 @@
        "NO_COMPLETE_ALIASES"
     ];
 
+    profileExtra = ''
+    eval "$(brew shellenv)"
+    '';
+
     initContent = let
       zshFunctions = lib.mkOrder 500 ''
         # Functions
