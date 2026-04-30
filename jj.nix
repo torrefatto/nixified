@@ -10,10 +10,13 @@
 
       ui = {
         merge-editor = "vimdiff";
-        bookmark-list-sort-keys = ["commiter-date-"];
+        bookmark-list-sort-keys = ["committer-date-"];
         default-command = "status";
         pager = "delta";
-        diff-formatter = ":git";
+        diff-formatter = "delta";
+        diff = {
+          format = "git";
+        };
       };
 
       merge-tools = {
@@ -41,7 +44,7 @@
       aliases = {
         pull = ["util" "exec" "--" "bash" "-c" ''
         jj git fetch
-        jj rebase --branch local --destination=$1@origin
+        jj new $1@origin
         jj bookmark set local --allow-backwards
         '' ""];
         push = ["util" "exec" "--" "bash" "-c" ''
