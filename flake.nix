@@ -27,6 +27,7 @@
           ./gnupg.nix
           ./git.nix
           ./jj.nix
+          ./vibe.nix
         ];
       };
 
