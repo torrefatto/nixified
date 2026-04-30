@@ -114,6 +114,7 @@ in
     gcloud
     google-cloud-sql-proxy
     pgcli
+    terraform
   ];
 
   home.sessionPath = [
@@ -125,6 +126,14 @@ in
     EDITOR = "vim";
     SDKROOT = "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk";
     MANPAGER = "bat -l man -p";
+    TF_VAR_org_id = "226702439374";
+    TF_ADMIN = "koyeb-terraform-admin";
+    TF_VAR_billing_account = "0163CA-A0F034-8C198B";
+    TF_CREDS = "$HOME/.koyeb-infra/gcp-credentials.json";
+    GOOGLE_APPLICATION_CREDENTIALS = "$HOME/.koyeb-infra/gcp-credentials.json";
+    GOOGLE_PROJECT = "koyeb-terraform-admin";
+    CLOUDFLARE_ZONE_ID = "5e3d2af4149d478110cec915409094bf";
+    CLOUDFLARE_ACCOUNT_ID = "8f3ae507b764dc038d563adaf6f500cf";
   };
 
   # manual management of the original vim config (keeping vim and neovim distinct)
