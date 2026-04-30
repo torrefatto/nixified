@@ -74,6 +74,7 @@ in
     fzf
     tree
     cbonsai
+    viddy
     # mgmt
     htop
     kubectl
@@ -95,17 +96,21 @@ in
     go
     delve
     golangci-lint
+    buf
+    ko
     rustup
     python3
     gnumake
     nil
     uv
     nodejs_25
+    pnpm
     jsonnet
     # kubernetes & cloud
     kubectl
     k9s
     kubectx
+    kubernetes-helm
     gcloud
     google-cloud-sql-proxy
     pgcli
