@@ -108,7 +108,7 @@ in
     gnumake
     nil
     uv
-    nodejs_25
+    nodejs
     pnpm
     jsonnet
     spicedb-zed
