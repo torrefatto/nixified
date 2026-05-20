@@ -1,17 +1,12 @@
 { lib, ...}:
 {
-  programs.ssh = {
-    matchBlocks = {
-      # Sane settings
+  programs.ssh.settings = {
       "*" = {
-        controlMaster = lib.mkForce "auto";
-        controlPersist = lib.mkForce "1800";
-        controlPath = lib.mkForce "~/.ssh/sockets/%C";
-        identityAgent = "/Users/leonardo.barcaroli/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh";
-        setEnv = {
-          TERM = "xterm";
-        };
+        ControlMaster = lib.mkForce "auto";
+        ControlPersist = lib.mkForce "1800";
+        ControlPath = lib.mkForce "~/.ssh/sockets/%C";
+        IdentityAgent = "/Users/leonardo.barcaroli/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh";
+        SetEnv.TERM = "xterm";
       };
     };
-  };
 }
