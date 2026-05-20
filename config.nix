@@ -96,6 +96,7 @@ in
     podman-compose
     kind
     gh
+    grpcurl
     # languages and toolchains
     go
     delve
