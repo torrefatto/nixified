@@ -111,6 +111,7 @@ in
     nodejs_25
     pnpm
     jsonnet
+    spicedb-zed
     # kubernetes & cloud
     kubectl
     k9s
