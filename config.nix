@@ -87,6 +87,7 @@ in
     # dev tools
     jq
     fx
+    yq-go
     git
     tig
     jujutsu
