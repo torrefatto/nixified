@@ -119,10 +119,12 @@ in
     k9s
     kubectx
     kubernetes-helm
+    kustomize
     gcloud
     google-cloud-sql-proxy
     pgcli
     terraform
+    azure-cli
   ];
 
   home.sessionPath = [
