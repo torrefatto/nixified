@@ -65,6 +65,7 @@ in
   home.packages = with pkgs; [
     # crypto
     gnupg
+    pinentry_mac
     sequoia-sq
     sequoia-sqv
     # shell
