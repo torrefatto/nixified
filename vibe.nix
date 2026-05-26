@@ -3,7 +3,8 @@
     enable_notifications = true;
 
     mcp_servers = [
-      {name="notion"; transport="http"; url = "https://mcp.notion.com/mcp";}
+      {name="notion"; transport="http"; url = "https://mcp.notion.com/mcp"; disabled = false;}
+      {name="linear"; transport="http"; url = "https://mcp.linear.app/mcp"; disabled = false;}
     ];
   };
 }
