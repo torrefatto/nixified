@@ -30,6 +30,7 @@
       kkk = "cbonsai -m 'You should rest'";
       docker = "podman";
       pinentry = "pinentry-mac";
+      tree = "tree -C";
     };
 
     setOptions = [
@@ -102,6 +103,10 @@
             fi
             echo ssh ''${ssh_opts[@]} -l leonardo "''${full_host}" ''${remote_opts[@]}
             ssh ''${ssh_opts[@]} -l leonardo "''${full_host}" ''${remote_opts[@]}
+        }
+
+        function ,jwt-decode() {
+            jq -R 'split(".") |.[0:2] | map(gsub("-"; "+") | gsub("_"; "/") | gsub("%3D"; "=") | @base64d) | map(fromjson)' <<< $1
         }
       '';
 
