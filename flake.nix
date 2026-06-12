@@ -1,11 +1,11 @@
 {
   description = "Nixtral configuration";
 
-  #inputs.nixpkgs.url = "github:NixOS/nixpkgs/master";
 
-  #inputs.nixtral.url = "git+ssh://git@github.com/mistralai/nixtral.git?ref=<branch>";
+  #inputs.nixtral.url = "git+ssh://git@github.com/mistralai/nixtral.git?ref=fix/opus-4.8-thinking";
   inputs.nixtral.url = "git+ssh://git@github.com/mistralai/nixtral.git";
-  #inputs.nixtral.inputs.nixpkgs.follows = "nixpkgs";
+  inputs.nixtral.inputs.nixpkgs.follows = "nixpkgs";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/master";
 
   inputs.jj-starship.url = "github:dmmulroy/jj-starship";
 
