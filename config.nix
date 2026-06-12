@@ -9,6 +9,7 @@
 { lib, pkgs, ... }:
 let
   gcloud = pkgs.google-cloud-sdk.withExtraComponents [ pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin ];
+  pinentry-touchid = pkgs.callPackage ./pinentry-touchid.nix { };
 in
 {
   # Options under `nixtral` are custom and definied in https://github.com/mistralai/nixtral
@@ -66,6 +67,7 @@ in
     # crypto
     gnupg
     pinentry_mac
+    pinentry-touchid
     sequoia-sq
     sequoia-sqv
     # shell
