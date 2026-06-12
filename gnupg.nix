@@ -15,5 +15,8 @@ in
     enableZshIntegration = true;
     enableSshSupport = true;
     pinentry.package = pinentry-touchid;
+    sshKeys = [
+      "3BC138C5586B157F2B53ECDEFC71C47531740F95"
+    ];
   };
 }

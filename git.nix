@@ -1,14 +1,18 @@
+{ lib, ...}:
 {
   #imports = [];
   programs.git = {
     enable = true;
 
     signing = {
-      format = "openpgp";
+      format = lib.mkForce "openpgp";
       key = "0x1A06ACF18DCB695D3808EF82D8DBFB6A2AC6610C";
     };
 
-    settings = { 
+
+    settings = {
+      gpg.format = "openpgp";
+
       url = {
         "git@github.com:" = {
           insteadOf = "https://github.com/";
