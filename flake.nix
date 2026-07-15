@@ -29,6 +29,7 @@
           ./git.nix
           ./jj.nix
           ./vibe.nix
+          ./herdr.nix
         ];
       };
 

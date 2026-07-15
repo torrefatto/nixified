@@ -105,6 +105,8 @@ in
     ast-grep
     libghostty-vt
     herdr
+    just
+    cargo-nextest
     # languages and toolchains
     go
     delve
@@ -121,6 +123,7 @@ in
     tsx
     jsonnet
     spicedb-zed
+    zig
     # kubernetes & cloud
     kubectl
     k9s
