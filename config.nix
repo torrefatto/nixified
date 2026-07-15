@@ -82,6 +82,7 @@ in
     tree
     cbonsai
     viddy
+    sd
     # mgmt
     htop
     kubectl
@@ -101,6 +102,9 @@ in
     kind
     gh
     grpcurl
+    ast-grep
+    libghostty-vt
+    herdr
     # languages and toolchains
     go
     delve
@@ -114,6 +118,7 @@ in
     uv
     nodejs
     pnpm
+    tsx
     jsonnet
     spicedb-zed
     # kubernetes & cloud
@@ -127,6 +132,7 @@ in
     pgcli
     terraform
     azure-cli
+    fluxcd
   ];
 
   home.sessionPath = [
