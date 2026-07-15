@@ -53,6 +53,13 @@
         '' "jj-push"];
         llog = ["log" "-r" "(local..@):: | (local..@)-"];
         rlog = ["log" "-r" "($1@origin..@):: | ($1@origin..@)-"];
+        onto = ["util" "exec" "--" "bash" "-c" ''
+        jj b l --color=always --sort=committer-date- | fzf --ansi | awk -F: '{print $1}' | xargs jj new
+        '' ""];
+        into = ["util" "exec" "--" "bash" "-c" ''
+        jj b l --color=always --sort=committer-date- | fzf --ansi | awk -F: '{print $1}' | xargs jj edit
+        '' ""];
+        cleanup = ["abandon" "--retain-bookmarks" "\'empty() & ~merges() & ~immutable()\'"];
       };
     };
   };
