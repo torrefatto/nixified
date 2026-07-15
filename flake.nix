@@ -2,7 +2,7 @@
   description = "Nixtral configuration";
 
 
-  #inputs.nixtral.url = "git+ssh://git@github.com/mistralai/nixtral.git?ref=fix/opus-4.8-thinking";
+  #inputs.nixtral.url = "git+ssh://git@github.com/mistralai/nixtral.git?ref=feat/add-mistral-large-4";
   inputs.nixtral.url = "git+ssh://git@github.com/mistralai/nixtral.git";
   inputs.nixtral.inputs.nixpkgs.follows = "nixpkgs";
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/master";
