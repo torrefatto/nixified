@@ -31,6 +31,7 @@
       docker = "podman";
       pinentry = "pinentry-mac";
       tree = "tree -C";
+      vibe-ml4 = "env VIBE_ACTIVE_MODEL=mistral-large-4 vibe";
     };
 
     setOptions = [
