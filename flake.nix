@@ -9,13 +9,17 @@
 
   inputs.jj-starship.url = "github:dmmulroy/jj-starship";
 
+  inputs.bacon-ls.url = "github:crisidev/bacon-ls";
+  inputs.bacon-ls.inputs.nixpkgs.follows = "nixpkgs";
+
   outputs =
-    { self, nixtral, ... }:
+    { self, nixtral, bacon-ls, ... }:
     let
       profileName = "default";
     in
     {
       homeConfigurations.${profileName} = nixtral.lib.mkHomeManagerConfiguration {
+        inputOverrides = { inherit bacon-ls; };
         modules = [
           ./config.nix
           { nixtral.configProfile = profileName; }

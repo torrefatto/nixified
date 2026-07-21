@@ -6,7 +6,7 @@
   - GitHub repo: https://github.com/nix-community/home-manager
   - Available options: https://nix-community.github.io/home-manager/options.xhtml
 */
-{ lib, pkgs, ... }:
+{ lib, pkgs, inputs, ... }:
 let
   gcloud = pkgs.google-cloud-sdk.withExtraComponents [ pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin ];
   pinentry-touchid = pkgs.callPackage ./pinentry-touchid.nix { };
@@ -107,6 +107,8 @@ in
     herdr
     just
     cargo-nextest
+    bacon
+    inputs.bacon-ls.defaultPackage.${pkgs.stdenv.hostPlatform.system}
     # languages and toolchains
     go
     delve
