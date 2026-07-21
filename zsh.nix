@@ -32,6 +32,7 @@
       pinentry = "pinentry-mac";
       tree = "tree -C";
       vibe-ml4 = "env VIBE_ACTIVE_MODEL=mistral-large-4 vibe";
+      irc = "ssh -p 2222 $(cat ~/.irc) -t 'tmux a -t irc || tmux new -s irc'";
     };
 
     setOptions = [
