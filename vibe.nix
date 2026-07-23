@@ -1,5 +1,9 @@
 { lib, ... }:
 {
+  # Use the vibe package built from the local flake checkout.
+  programs.mistral-vibe.package =
+    inputs.mistral-vibe.packages.${pkgs.stdenv.hostPlatform.system}.default;
+
   programs.mistral-vibe.settings = {
     enable_notifications = true;
     voice_mode_enabled = true;

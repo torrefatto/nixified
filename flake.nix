@@ -12,14 +12,17 @@
   inputs.bacon-ls.url = "github:crisidev/bacon-ls";
   inputs.bacon-ls.inputs.nixpkgs.follows = "nixpkgs";
 
+  # Local checkout of mistral-vibe; provides the vibe package via its flake.
+  inputs.mistral-vibe.url = "git+file:///Users/leonardo.barcaroli/workspace/mistral/mistral-vibe";
+
   outputs =
-    { self, nixtral, bacon-ls, ... }:
+    { self, nixtral, bacon-ls, mistral-vibe, ... }:
     let
       profileName = "default";
     in
     {
       homeConfigurations.${profileName} = nixtral.lib.mkHomeManagerConfiguration {
-        inputOverrides = { inherit bacon-ls; };
+        inputOverrides = { inherit bacon-ls mistral-vibe; };
         modules = [
           ./config.nix
           { nixtral.configProfile = profileName; }
