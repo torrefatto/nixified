@@ -110,11 +110,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1783222121,
-        "narHash": "sha256-E/ElL373TO8lQ2aMvYyzN+k4xkVaUGoRqoa8AtM71tI=",
+        "lastModified": 1784690067,
+        "narHash": "sha256-t86pRs7IPs3RTMPueWvvdcxyTFrctHAv2Jl7jnjsSf8=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "a1645f40777620c4bd2b6d854b290c2fc354a266",
+        "rev": "6d8d61567802997f9ec3086b2a837e3ef31fac16",
         "type": "github"
       },
       "original": {
@@ -169,11 +169,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1781761792,
-        "narHash": "sha256-rCPytmKNjctLloB6UgK5CRrHSwV4b0ygxtJLPPp8R14=",
+        "lastModified": 1784500460,
+        "narHash": "sha256-UvORnAxTRHax7RG74W8Z2t4GvIkX6AjJ5kk0QlwZomo=",
         "owner": "lnl7",
         "repo": "nix-darwin",
-        "rev": "a1fa429e945becaf60468600daf649be4ba0350c",
+        "rev": "57a3171f94705599a2499248ca5758d5eb47c0e0",
         "type": "github"
       },
       "original": {
@@ -190,11 +190,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1783233851,
-        "narHash": "sha256-jzisD+3wWZPC4QvAsKtYguiGsmlH2SN3Mjx5LWd68Ok=",
+        "lastModified": 1784440659,
+        "narHash": "sha256-Q5kNLlWngt7TaIIZoxDKWMHjiSaNRVqr70FqWCRRfr4=",
         "owner": "nix-community",
         "repo": "nix-index-database",
-        "rev": "fab14c7b63499d57cb6673d5690168c3ec42b99a",
+        "rev": "4f8d52a3598b0dc7db7a5e7b419e3edd9d1ecfdb",
         "type": "github"
       },
       "original": {
@@ -237,11 +237,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1783957524,
-        "narHash": "sha256-1pU1kpfLr/9LWXSPQ5jHm5U09bW7kCffwZme8cUY5kQ=",
+        "lastModified": 1784739186,
+        "narHash": "sha256-rM+gV/9TXYWEzOksY5JAB5rcPOU8cZhlfzJyto0xeBU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "8c94529dfdc2868425b3c322409fdad123173c90",
+        "rev": "2599fa9847bb93f8792c1c74ddfe2b99b8926111",
         "type": "github"
       },
       "original": {
@@ -262,11 +262,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1783434779,
-        "narHash": "sha256-iNMaiVXJCGXS9Ie1y50ASFW96lPlUbSDAuDAYKXk9vI=",
+        "lastModified": 1784696651,
+        "narHash": "sha256-Rdc93eGHwmkXS6/3GvolHgtZ4zXbs37LA3i3RO50Y50=",
         "ref": "refs/heads/main",
-        "rev": "15187531f38b1375f22f65c3338bb92db20989ce",
-        "revCount": 124,
+        "rev": "841fa64abf1d802d7a51259d994d2909dc2c37fa",
+        "revCount": 131,
         "type": "git",
         "url": "ssh://git@github.com/mistralai/nixtral.git"
       },
