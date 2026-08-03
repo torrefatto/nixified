@@ -138,6 +138,7 @@ in
     terraform
     azure-cli
     fluxcd
+    vault
   ];
 
   home.sessionPath = [
