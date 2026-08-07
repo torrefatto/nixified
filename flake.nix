@@ -2,10 +2,10 @@
   description = "Nixtral configuration";
 
 
-  #inputs.nixtral.url = "git+ssh://git@github.com/mistralai/nixtral.git?ref=feat/add-mistral-large-4";
+  #inputs.nixtral.url = "git+ssh://git@github.com/mistralai/nixtral.git?ref=blallo/moar-models";
   inputs.nixtral.url = "git+ssh://git@github.com/mistralai/nixtral.git";
   inputs.nixtral.inputs.nixpkgs.follows = "nixpkgs";
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/master";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
   inputs.jj-starship.url = "github:dmmulroy/jj-starship";
 
