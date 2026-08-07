@@ -22,6 +22,7 @@
       {name = "linear"; disabled = false;}
     ];
 
+    /*
     models = [
       {
         alias = "glm-5.2";
@@ -35,5 +36,6 @@
         supports_images = false;
       }
     ];
+    */
   };
 }
