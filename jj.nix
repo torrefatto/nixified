@@ -48,6 +48,7 @@
         jj bookmark set local --allow-backwards
         '' ""];
         push = ["util" "exec" "--" "bash" "-c" ''
+        if [ -z $1 ]; then echo "You need to specify a bookmark"; exit 1; fi
         jj bookmark track $1 --remote=origin
         jj git push -b $1
         '' "jj-push"];
@@ -59,7 +60,7 @@
         into = ["util" "exec" "--" "bash" "-c" ''
         jj b l --color=always --sort=committer-date- | fzf --ansi | awk -F: '{print $1}' | xargs jj edit
         '' ""];
-        cleanup = ["abandon" "--retain-bookmarks" "\'empty() & ~merges() & ~immutable()\'"];
+        cleanup = ["abandon" "--retain-bookmarks" "\"empty() & ~merges() & ~immutable()\""];
       };
     };
   };
