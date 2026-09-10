@@ -2,8 +2,8 @@
   description = "Nixtral configuration";
 
 
-  #inputs.nixtral.url = "git+ssh://git@github.com/mistralai/nixtral.git?ref=blallo/moar-models";
-  inputs.nixtral.url = "git+ssh://git@github.com/mistralai/nixtral.git";
+  inputs.nixtral.url = "git+ssh://git@github.com/mistralai/nixtral.git?ref=fix/tmux-jemalloc";
+  #inputs.nixtral.url = "git+ssh://git@github.com/mistralai/nixtral.git";
   inputs.nixtral.inputs.nixpkgs.follows = "nixpkgs";
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
