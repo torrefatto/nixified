@@ -139,6 +139,7 @@ in
     azure-cli
     fluxcd
     vault
+    inputs.loki.packages.${pkgs.stdenv.hostPlatform.system}.logcli
   ];
 
   home.sessionPath = [
