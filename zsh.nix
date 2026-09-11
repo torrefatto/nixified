@@ -43,6 +43,10 @@
     eval "$(brew shellenv)"
     '';
 
+    envExtra = ''
+    fpath+=("''${HOME}/.config/zsh_completions")
+    '';
+
     initContent = let
       zshFunctions = lib.mkOrder 500 ''
         # Functions
@@ -116,10 +120,7 @@
         # Completions and bindings
 
         __regen_or_source _tailscale "/Applications/Tailscale.app/Contents/MacOS/Tailscale completion zsh"
-
-        # Completion paths
-
-        fpath+=("''${HOME}/.config/zsh_completions")
+        __regen_or_source _logcli "logcli --completion-script-zsh"
 
         # Binds
 
