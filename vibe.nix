@@ -10,7 +10,7 @@
 
     #active_model = lib.mkForce "mistral-large-4";
     #active_model = "opus-4.8";
-    active_model =  lib.mkForce "glm-5.2";
+    #active_model =  lib.mkForce "glm-5.3";
 
     mcp_servers = [
       {name="notion"; transport="http"; url = "https://mcp.notion.com/mcp"; disabled = false;}

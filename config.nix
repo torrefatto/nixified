@@ -36,11 +36,6 @@ in
     };
 
     vibe = {
-      models = {
-        anthropic.enable = true;
-        mistral.enable = true;
-      };
-
       tools = {
         claude-code = {
           enable = true;
