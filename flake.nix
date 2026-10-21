@@ -40,6 +40,7 @@
           ./jj.nix
           ./vibe.nix
           ./herdr.nix
+          ./taskwarrior.nix
         ];
       };
 
