@@ -72,13 +72,17 @@
             local branch="''${1}"
             local title="''${2}"
 
-            if [[ "''${branch}" = "+"* ]]; then
-                branch=''${branch#+}
+            if jj bookmark list | grep -qv ''${branch}; then
                 jj bookmark create -r @- ''${branch}
             fi
 
+            if [[ "''${branch}" = "^"* ]]; then
+                branch=''${branch#^}
+                other_conf="--draft"
+            fi
+
             jj push ''${branch}
-            gh pr create --title "''${title}" --head ''${branch}
+            gh pr create --title "''${title}" --head ''${branch} ''${other_conf}
         }
 
         function ,kssh() {
