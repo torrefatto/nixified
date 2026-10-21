@@ -154,7 +154,7 @@ in
     MANPAGER = "bat -l man -p";
     TF_VAR_org_id = "226702439374";
     TF_ADMIN = "koyeb-terraform-admin";
-    TF_VAR_billing_account = "0163CA-A0F034-8C198B";
+    TF_VAR_billing_account = "019DB9-A98003-2DA6F6";
     TF_CREDS = "$HOME/.koyeb-infra/gcp-credentials.json";
     GOOGLE_APPLICATION_CREDENTIALS = "$HOME/.koyeb-infra/gcp-credentials.json";
     GOOGLE_PROJECT = "koyeb-terraform-admin";
