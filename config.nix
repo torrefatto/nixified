@@ -88,6 +88,7 @@ in
     kubectl
     bitwarden-cli
     syncthing-macos
+    _1password-cli
     # dev tools
     jq
     fx
