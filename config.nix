@@ -10,6 +10,28 @@
 let
   gcloud = pkgs.google-cloud-sdk.withExtraComponents [ pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin ];
   pinentry-touchid = pkgs.callPackage ./pinentry-touchid.nix { };
+
+  # azure-cli depends on fabric, which nixpkgs marks broken because it pins
+  # invoke<3.0 while nixpkgs ships invoke 3.x. Relaxing the bound builds fine.
+  # https://github.com/fabric/fabric/issues/2376
+  azure-cli = (pkgs.extend (final: prev: {
+    pythonPackagesExtensions = prev.pythonPackagesExtensions ++ [
+      (pyFinal: pyPrev: {
+        fabric = pyPrev.fabric.overridePythonAttrs (old: {
+          pythonRelaxDeps = (old.pythonRelaxDeps or [ ]) ++ [ "invoke" ];
+          doCheck = false;
+          meta = old.meta // { broken = false; };
+        });
+      })
+    ];
+  })).azure-cli;
+
+  # opencode's fixed-output node_modules hash drifted upstream; override it.
+  opencode = pkgs.opencode.overrideAttrs (old: {
+    node_modules = old.node_modules.overrideAttrs (nmOld: {
+      outputHash = "sha256-dIveiaiPFGSItwLyeMuPDxTE9gpvvnlTCB/+nG24qCc=";
+    });
+  });
 in
 {
   # Options under `nixtral` are custom and definied in https://github.com/mistralai/nixtral
