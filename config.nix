@@ -147,7 +147,7 @@ in
     nodejs
     pnpm
     tsx
-    jsonnet
+    go-jsonnet
     spicedb-zed
     zig
     # kubernetes & cloud
