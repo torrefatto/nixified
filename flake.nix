@@ -17,7 +17,8 @@
   inputs.loki.inputs.nixpkgs-unstable.follows = "nixpkgs";
 
   # Local checkout of mistral-vibe; provides the vibe package via its flake.
-  inputs.mistral-vibe.url = "git+file:///Users/leonardo.barcaroli/workspace/mistral/mistral-vibe";
+  #inputs.mistral-vibe.url = "git+file:///Users/leonardo.barcaroli/workspace/mistral/mistral-vibe";
+  inputs.mistral-vibe.url = "github:mistralai/mistral-vibe";
 
   outputs =
     { self, nixtral, bacon-ls, mistral-vibe, loki, ... }:
