@@ -34,6 +34,9 @@ let
   });
 in
 {
+  # Back up files that home-manager would clobber instead of failing
+  home.backupFileExtension = "hm-bak";
+
   # Options under `nixtral` are custom and definied in https://github.com/mistralai/nixtral
   # Check out the README to see what options are available
   nixtral = {
