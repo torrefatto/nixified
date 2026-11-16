@@ -81,6 +81,9 @@ in
     };
   };
 
+  # opencode's pinned node_modules hash drifted upstream; use the corrected one
+  programs.opencode.package = lib.mkForce opencode;
+
   # Install some packages
   # Find available packages here: https://search.nixos.org/packages?channel=unstable
   home.packages = with pkgs; [
