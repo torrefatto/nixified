@@ -1,5 +1,6 @@
 { lib, pkgs, ... }:
 let
+  passphraseCacheTtl = 8 * 60 * 60;
   pinentry-touchid = pkgs.callPackage ./pinentry-touchid.nix { };
 in
 {
@@ -11,6 +12,8 @@ in
 
   services.gpg-agent = {
     enable = true;
+    defaultCacheTtl = passphraseCacheTtl;
+    maxCacheTtl = passphraseCacheTtl;
     enableScDaemon = true;
     enableZshIntegration = true;
     enableSshSupport = true;
