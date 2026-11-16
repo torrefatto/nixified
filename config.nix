@@ -169,6 +169,7 @@ in
   home.sessionPath = [
     "/Users/leonardo.barcaroli/.bin"
     "/opt/homebrew/bin"
+    "/Users/leonardo.barcaroli/.local/bin"
   ];
 
   home.sessionVariables = {
