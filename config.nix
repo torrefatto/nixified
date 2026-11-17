@@ -25,13 +25,6 @@ let
       })
     ];
   })).azure-cli;
-
-  # opencode's fixed-output node_modules hash drifted upstream; override it.
-  opencode = pkgs.opencode.overrideAttrs (old: {
-    node_modules = old.node_modules.overrideAttrs (nmOld: {
-      outputHash = "sha256-dIveiaiPFGSItwLyeMuPDxTE9gpvvnlTCB/+nG24qCc=";
-    });
-  });
 in
 {
   # Back up files that home-manager would clobber instead of failing
@@ -80,9 +73,6 @@ in
       };
     };
   };
-
-  # opencode's pinned node_modules hash drifted upstream; use the corrected one
-  programs.opencode.package = lib.mkForce opencode;
 
   # Install some packages
   # Find available packages here: https://search.nixos.org/packages?channel=unstable
