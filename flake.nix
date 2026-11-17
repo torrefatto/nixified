@@ -3,7 +3,8 @@
 
 
   #inputs.nixtral.url = "git+ssh://git@github.com/mistralai/nixtral.git?ref=feat/update-vibe-models";
-  inputs.nixtral.url = "git+ssh://git@github.com/mistralai/nixtral.git";
+  #inputs.nixtral.url = "git+ssh://git@github.com/mistralai/nixtral.git";
+  inputs.nixtral.url = "github:mistralai/nixtral";
   inputs.nixtral.inputs.nixpkgs.follows = "nixpkgs";
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
@@ -19,6 +20,9 @@
   # Local checkout of mistral-vibe; provides the vibe package via its flake.
   #inputs.mistral-vibe.url = "git+file:///Users/leonardo.barcaroli/workspace/mistral/mistral-vibe";
   inputs.mistral-vibe.url = "github:mistralai/mistral-vibe";
+  # Build the vibe package against the same nixpkgs as everything else, so it
+  # picks up darwin fixes (e.g. libffi trampoline changes on macOS 27.2.1).
+  inputs.mistral-vibe.inputs.nixpkgs.follows = "nixpkgs";
 
   outputs =
     { self, nixtral, bacon-ls, mistral-vibe, loki, ... }:
