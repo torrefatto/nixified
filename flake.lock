@@ -158,11 +158,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794715309,
-        "narHash": "sha256-awkBBs5ctFKgEYjpNGpi3t/VqF589n5EWfdinRb2gNI=",
+        "lastModified": 1794897420,
+        "narHash": "sha256-hMI9Xg+lxS8kbnxIxL/jPQn688dstoxQAcMEbCb1ax0=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "a1293da7dd8e497e08d26173f97e2976b36a31ea",
+        "rev": "5b76c5b8eec25fdbce4f43309b3ee10584374a26",
         "type": "github"
       },
       "original": {
@@ -201,11 +201,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794842741,
-        "narHash": "sha256-cT2BPPQsb7SgZI5w9AVZwCztLoOD55CoAUYsraOzMnk=",
+        "lastModified": 1794911673,
+        "narHash": "sha256-nxDKnX6SD3TKbl5S7ejTlcF+IHHW2PTA14y2Tq1NUFQ=",
         "owner": "grafana",
         "repo": "loki",
-        "rev": "b5a18c9367babceca884ff249bc749c1bdcf888e",
+        "rev": "fbf69660f40a2a57aea20e95fa31b91cbf67ecdc",
         "type": "github"
       },
       "original": {
@@ -217,7 +217,9 @@
     "mistral-vibe": {
       "inputs": {
         "crane": "crane",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "pyproject-build-systems": "pyproject-build-systems",
         "pyproject-nix": "pyproject-nix",
         "uv2nix": "uv2nix"
@@ -343,27 +345,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1782723713,
-        "narHash": "sha256-oPXCU/SSUokcGaJREHibG1CBX3+s/W7orDWQOZDsEeQ=",
+        "lastModified": 1794705614,
+        "narHash": "sha256-DZ5eNWHA6heAHwkMt1SBtF1p8Lfgi4ivqdqmgxUZkLs=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "b5aa0fbd538984f6e3d201be0005b4463d8b09f8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1794644783,
-        "narHash": "sha256-3GnIGIy15bMduoS9RnWqKTmsJLWThla42UFtm0S7+us=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "5d2b81a7a3be3e2f832879028e4d60abbf58e9a0",
+        "rev": "1c872b8c508bbbfebc1b0b74777ff391ce0a574c",
         "type": "github"
       },
       "original": {
@@ -385,17 +371,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1794827380,
-        "narHash": "sha256-A7R6ZTgC9jSZYfhyZtt0sYAsIEkZiL8fjs6mGEMR7Go=",
-        "ref": "refs/heads/main",
-        "rev": "69cd99e1a3244c299de8ff4c90073b4b8f55c8b7",
-        "revCount": 261,
-        "type": "git",
-        "url": "ssh://git@github.com/mistralai/nixtral.git"
+        "lastModified": 1794912644,
+        "narHash": "sha256-MNLMRG8nq2CLIgpoA3fWakFbQZbb8NoBiFa3wm8XPt4=",
+        "owner": "mistralai",
+        "repo": "nixtral",
+        "rev": "88d67524217991f701de817aa8779f158933a876",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "ssh://git@github.com/mistralai/nixtral.git"
+        "owner": "mistralai",
+        "repo": "nixtral",
+        "type": "github"
       }
     },
     "pyproject-build-systems": {
@@ -508,7 +494,7 @@
         "jj-starship": "jj-starship",
         "loki": "loki",
         "mistral-vibe": "mistral-vibe",
-        "nixpkgs": "nixpkgs_3",
+        "nixpkgs": "nixpkgs_2",
         "nixtral": "nixtral"
       }
     },
